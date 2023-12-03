@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
 import { Grid, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
 import { TurnedInNot } from '@mui/icons-material';
+
 import { setActiveNote } from '../../store/app';
 
 
@@ -24,7 +25,7 @@ export const SideBarItem = ({ title = '', body, id, date, imageUrls = [] }) => {
     <ListItem disablePadding>
         <ListItemButton onClick={ onClickNote }>
             <ListItemIcon>
-                <TurnedInNot />
+                <TurnedInNot/>
             </ListItemIcon>
             <Grid container>
                 <ListItemText primary={ newTitle } />

@@ -7,6 +7,7 @@ export const SideBar = ({ drawerWidth = 240 }) => {
 
     const { displayName } = useSelector( state => state.auth );
     const { notes } = useSelector( state => state.app );
+    
 
     return (
         <Box
@@ -29,11 +30,10 @@ export const SideBar = ({ drawerWidth = 240 }) => {
                 <Divider />
 
                 <List>
-                    {
-                        notes.map( note => (
-                            <SideBarItem key={ note.id } { ...note } />
-                        ))
-                    }
+                    <SideBarItem title='Inicio'></SideBarItem>
+                    <SideBarItem title='Consulta 1'></SideBarItem>
+                    <SideBarItem title='Consulta 2'></SideBarItem>
+                    <SideBarItem title='Consulta 3'></SideBarItem>
                 </List>
 
             </Drawer>
